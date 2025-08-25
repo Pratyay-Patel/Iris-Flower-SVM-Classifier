@@ -108,14 +108,4 @@ The **Iris dataset** contains:
 
 ---
 
-## 📸 Screenshots
-(Add your app screenshots here)
 
----
-
-## 📜 License
-This project is licensed under the **MIT License**.  
-
----
-
-✨ Built with ❤️ using Flask & scikit-learn ✨
