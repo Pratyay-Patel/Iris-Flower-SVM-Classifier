@@ -1,24 +1,21 @@
-🌸 Iris Flower SVM Classifier – Flask Web App
+# 🌸 Iris Flower SVM Classifier – Flask Web App  
 
-This project is a simple Machine Learning + Web Application that classifies Iris flowers into three species (Setosa, Versicolor, Virginica) based on user inputs for sepal and petal dimensions.
+A simple web application that classifies Iris flowers into **Setosa**, **Versicolor**, or **Virginica** using an **SVM model** trained with scikit-learn.  
 
-It uses Support Vector Machine (SVM) for classification, a Flask backend for model serving, and a Bootstrap-powered frontend for interaction.
+---
 
-🚀 Features
+## 🚀 Features
+- Train and save an **SVM classifier** on the Iris dataset  
+- Flask-powered backend with HTML frontend  
+- Input validation and error handling  
+- Instant prediction via a clean web interface  
 
-Train an SVM classifier on the famous Iris dataset
+---
 
-Save and load model, scaler, and target labels using pickle
-
-Web interface built with Flask + Bootstrap
-
-Input validation with error messages for values outside dataset ranges
-
-Displays predicted Iris species instantly
-
-📂 Project Structure
+## 📂 Project Structure
+```
 Iris-Flower-SVM-Classifier/
-│── app.py                # Flask backend
+│── app.py                 # Flask backend
 │── iris_svm_classifier.py # Training script
 │── svm_model.pkl          # Trained SVM model
 │── scaler.pkl             # Scaler for preprocessing
@@ -27,108 +24,98 @@ Iris-Flower-SVM-Classifier/
 │    └── index.html        # Frontend UI
 │── static/                # (Optional: CSS/JS/Images)
 │── README.md              # Documentation
-│── venv/                  # Virtual environment (not pushed to GitHub)
+```
 
-⚙️ Installation
+---
 
-Clone this repository:
+## ⚙️ Installation
 
+```bash
+# Clone the repository
 git clone https://github.com/yourusername/Iris-Flower-SVM-Classifier.git
 cd Iris-Flower-SVM-Classifier
 
-
-Create a virtual environment:
-
+# Create and activate venv
 python -m venv venv
+venv\Scripts\activate    # (Windows)
+source venv/bin/activate # (Linux/Mac)
 
-
-Activate it:
-
-On Windows (PowerShell):
-
-venv\Scripts\activate
-
-
-On Linux/Mac:
-
-source venv/bin/activate
-
-
-Install dependencies:
-
+# Install dependencies
 pip install flask scikit-learn numpy matplotlib
+```
 
-🏋️ Training the Model
+---
 
-Run the training script to generate the model and preprocessing files:
+## 🏋️ Training the Model
+Run the training script to generate model files:
 
+```bash
 python iris_svm_classifier.py
-
+```
 
 This will create:
+- `svm_model.pkl`
+- `scaler.pkl`
+- `target_names.pkl`
 
-svm_model.pkl
+---
 
-scaler.pkl
-
-target_names.pkl
-
-🌐 Running the Web App
-
+## 🌐 Running the Web App
 Start the Flask server:
 
+```bash
 python app.py
+```
 
+Then open 👉 [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser.  
 
-Then open your browser and go to:
-👉 http://127.0.0.1:5000/
+---
 
-🖥️ Usage
+## 🖥️ Usage
 
-Enter the flower’s measurements:
-
-Sepal Length (4.0 – 8.5 cm)
-
-Sepal Width (2.0 – 4.5 cm)
-
-Petal Length (1.0 – 7.5 cm)
-
-Petal Width (0.1 – 2.6 cm)
-
-Click Predict
-
-See the predicted Iris species or an error message if inputs are invalid.
-
-🧪 Example Inputs
-
-✅ Valid Input
-
+### ✅ Example of Valid Input
+```
 Sepal Length: 5.1
 Sepal Width: 3.5
 Petal Length: 1.4
 Petal Width: 0.2
+```
+➡️ Prediction: **Iris-setosa**
 
-
-➡️ Prediction: Iris-setosa
-
-❌ Invalid Input
-
+### ❌ Example of Invalid Input
+```
 Sepal Length: 3.0
 Sepal Width: 3.5
 Petal Length: 5.0
 Petal Width: 1.5
+```
+➡️ Error: *Invalid value for sepal length: 3.0. Must be between 4.0 and 8.5.*
 
+---
 
-➡️ Error: Invalid value for sepal length: 3.0. Must be between 4.0 and 8.5.
+## 📊 Dataset
+The **Iris dataset** contains:
+- 150 samples
+- 4 features:
+  - Sepal Length
+  - Sepal Width
+  - Petal Length
+  - Petal Width
+- 3 classes:
+  - *Setosa*
+  - *Versicolor*
+  - *Virginica*
 
-📊 Dataset
+---
 
-The project uses the Iris dataset, a classic dataset in machine learning containing 150 samples of iris flowers with four features each:
+## 📸 Screenshots
+(Add your app screenshots here)
 
-Sepal Length
+---
 
-Sepal Width
+## 📜 License
+This project is licensed under the **MIT License**.  
 
-Petal Length
+---
 
-Petal Width
+✨ Built with ❤️ using Flask & scikit-learn ✨
